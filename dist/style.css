@@ -180,7 +180,7 @@ button {
   padding-top: 0.5rem;
 }
 .section__background__img {
-  background-image: url("../../assets/img/body-background.jpg");
+  background-image: url("../../assets/img/main img mobile.jpg");
   background-size: cover;
   height: 43.75rem;
 }
@@ -450,15 +450,15 @@ button {
   overflow-y: auto;
 }
 
-@media only screen and (min-width: 1500px) {
-  body {
-    width: 80%;
-    margin: 0 auto;
-  }
+@media only screen and (min-width: 1251px) {
   .header__container__logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
   }
   .header__nav {
     margin: 0 5rem;
@@ -475,6 +475,15 @@ button {
   .section__benefits > div:nth-child(1) > .fa-moon {
     color: red;
   }
+  .section__subscribe__group {
+    flex-direction: row;
+  }
+  .section__subscribe__group > div {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3rem;
+    text-align: center;
+  }
   .section__subscribe__group > div > i {
     font-size: 2rem;
   }
@@ -482,7 +491,13 @@ button {
     font-size: 16px;
   }
   .section__subscribe__rotate-text {
+    transform: none;
     top: 15%;
+    right: 15%;
+    left: 10%;
+  }
+  .section__performance > div i {
+    font-size: 2.5rem;
   }
   .section__performance__group {
     display: grid;
@@ -491,38 +506,53 @@ button {
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 4rem;
   }
-  .section__performance__group > div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 0 2rem;
+  .section__performance__group > div:nth-child(1) {
+    grid-area: 2/3/3/4;
   }
-  .section__performance__group > div:nth-child(2) > .fa-bolt {
+  .section__performance__group > div:nth-child(2) {
+    grid-area: 1/2/2/3;
+  }
+  .section__performance__group > div:nth-child(2) > i {
     color: red;
+  }
+  .section__performance__group > div:nth-child(3) {
+    grid-area: 1/1/2/2;
+  }
+  .section__performance__group > div:nth-child(4) {
+    grid-area: 1/3/2/4;
+  }
+  .section__performance__group > div:nth-child(5) {
+    grid-area: 2/2/3/3;
+  }
+  .section__performance__group > div:nth-child(6) {
+    grid-area: 2/1/3/2;
+  }
+  .section__performance__organic {
+    flex-direction: row;
+    margin: 0 auto;
+    padding-top: 2rem;
   }
   .section__performance__boosting {
     background-color: #f9e8e7;
     position: relative;
-    padding: 5rem 0;
+    padding-top: 7rem;
   }
   .section__performance__boosting > span:nth-child(3) {
     position: absolute;
-    top: 9rem;
-    left: 0;
+    top: 25%;
+    left: 15%;
     text-align: left;
-    z-index: 15;
-    padding: 0 14rem;
+    z-index: 5;
+    width: 19.6rem;
+    padding: 2rem 3rem;
   }
   .section__performance__boosting > span:nth-child(2) {
     font-size: 1.25rem;
     padding: 1rem;
     position: absolute;
-    top: 6rem;
-    left: 13rem;
+    top: 20%;
+    left: 17%;
     z-index: 15;
-  }
-  .section__performance__boosting > div span {
-    white-space: nowrap;
   }
   .section__performance__boosting > div:nth-child(1) > span {
     font-size: 3.125rem;
@@ -532,12 +562,79 @@ button {
     left: 0;
     right: 0;
   }
-  .section__performance__boosting__items > div {
+  .section__performance__boosting > div span {
+    white-space: nowrap;
+  }
+  .section__performance__boosting__items {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 24rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .section__process__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5rem;
+  }
+  .section__process__container > div:nth-child(2),
+  .section__process__container div:nth-child(4),
+  .section__process__container div:nth-child(6) {
+    display: none;
+  }
+  .section__process__container > div:nth-child(1) {
+    flex-direction: row-reverse;
+    text-align: right;
+    position: absolute;
+    right: 2.4rem;
+    width: 25rem;
+  }
+  .section__process__container > div:nth-child(1) > i {
+    margin: 6rem 0 0 0;
+  }
+  .section__process__container > div:nth-child(3) {
+    flex-direction: row;
+    margin: 0 1rem;
+    text-align: left;
+    left: -1rem;
+    top: 12rem;
+    position: absolute;
+    width: 26rem;
+  }
+  .section__process__container > div:nth-child(3) > i {
+    margin: 4rem 0 0 0;
+  }
+  .section__process__container > div:nth-child(5) {
+    flex-direction: row-reverse;
+    margin: 0 1rem;
+    text-align: right;
+    right: 1rem;
+    top: 22rem;
+    position: absolute;
+    width: 25rem;
+  }
+  .section__process__container > div:nth-child(5) > i {
+    margin: 4rem 0 0 0;
+  }
+  .section__process__container > div:nth-child(7) {
+    flex-direction: row;
+    text-align: left;
+    position: absolute;
+    left: 0.4rem;
+    top: 29rem;
+    width: 25rem;
+  }
+  .section__process__container > div:nth-child(7) > i {
+    margin: 6rem 0 0 0;
+  }
+  .section__faq {
+    margin-top: 40rem;
   }
 }
-@media only screen and (min-width: 773px) {
+@media only screen and (min-width: 773px) and (max-width: 1250px) {
   .header__container__logo {
     position: absolute;
     top: 0;
@@ -545,6 +642,7 @@ button {
     right: 25%;
   }
   .section__background__img {
+    background-image: url("../../assets/img/tablet main img.jpg");
     height: 64rem;
   }
   .section__benefits {
@@ -577,13 +675,34 @@ button {
     grid-template-rows: repeat(3, 1fr);
     margin: 0 8rem;
   }
+  .section__performance__group > div {
+    padding: 0;
+  }
+  .section__performance__group > div:nth-child(1) {
+    grid-area: 3/2/4/3;
+  }
+  .section__performance__group > div:nth-child(2) {
+    grid-area: 1/2/2/3;
+  }
+  .section__performance__group > div:nth-child(3) {
+    grid-area: 1/1/2/2;
+  }
+  .section__performance__group > div:nth-child(4) {
+    grid-area: 2/2/3/3;
+  }
+  .section__performance__group > div:nth-child(5) {
+    grid-area: 3/1/4/2;
+  }
   .section__performance__organic {
     flex-direction: row;
     margin: 0 auto;
     padding-top: 2rem;
   }
+  .section__performance__boosting > div span {
+    white-space: nowrap;
+  }
   .section__performance__boosting > span:nth-child(3) {
-    width: 41.6rem;
+    width: 25.6rem;
     padding-bottom: 3rem;
   }
   .section__performance__boosting__items {
@@ -720,6 +839,7 @@ swiper-slide img {
 
 .swiper-slide-active,
 .swiper-slide-next,
-.swiper-slide-prev {
+.swiper-slide-prev,
+.mySwiper {
   background: #f9e8e7;
 }/*# sourceMappingURL=style.css.map */

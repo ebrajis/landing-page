@@ -6,7 +6,6 @@
 @import 'media';
 
 //swiper library
-
 swiper-container {
   width: 100%;
   height: 100%;
@@ -30,10 +29,7 @@ swiper-slide img {
 
 .swiper-slide-active,
 .swiper-slide-next,
-.swiper-slide-prev {
+.swiper-slide-prev,
+.mySwiper {
   background: $primaryIconBorder;
 }
-
-// .open {
-//   height: 20rem;
-// }
