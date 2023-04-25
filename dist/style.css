@@ -154,14 +154,7 @@ button {
 .section__background {
   position: relative;
 }
-.section__background > img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
-.section__background > span {
+.section__background > div span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -172,18 +165,25 @@ button {
   font-weight: 800;
   z-index: 1;
 }
-.section__background > span .quotes:before {
+.section__background > div span .quotes:before {
   content: "“";
 }
-.section__background > span .quotes:after {
+.section__background > div span .quotes:after {
   content: "”";
 }
-.section__background > button {
+.section__background > div button {
   position: absolute;
   background: #c2110e;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.section__background__img {
+  background-image: url("../../assets/img/body-background.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 24rem;
 }
 .section__benefits {
   flex-wrap: wrap;
@@ -427,7 +427,8 @@ button {
 
 @media only screen and (min-width: 1500px) {
   .header__nav {
-    margin: 0 10rem;
+    margin: 0 50rem;
+    border: 2px solid red;
   }
   .section__benefits > div {
     flex-direction: row;
