@@ -19,8 +19,6 @@ body {
   font-family: "Plus Jakarta Sans";
   line-height: 1.3;
   background-color: #f5f5f5;
-  height: 100vh;
-  height: -webkit-fill-available;
 }
 
 .flex {
@@ -47,15 +45,19 @@ i {
 }
 
 button {
-  width: 22.5rem;
-  height: 3.375rem;
-  border-radius: 0.938rem;
-  color: #f9e8e7;
-  border: 0;
-  font-weight: 400;
-  font-size: 1.375rem;
-  cursor: pointer;
-  transition-duration: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 42px;
+  gap: 10px;
+  position: absolute;
+  width: 360px;
+  height: 54px;
+  left: calc(50% - 180px + 1.5px);
+  top: calc(50% - 27px - 1971.5px);
+  background: #c2110e;
+  border-radius: 15px;
 }
 
 .font-w-sm {
